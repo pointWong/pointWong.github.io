@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="个人博客">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Brian">
+    
+    <title>
+        
+            最近一些面试总结 |
+        
+        oops
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/avatar.png">
+    
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"pointwong.github.io","root":"/","language":"zh-CN"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true},"style":{"primary_color":"#ef5b00","avatar":"/images/avatar.png","favicon":"/images/avatar.png","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"山中何事？松花酿酒，春水煎茶"},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":false}},"shadow":"#ccc"},"local_search":{"enable":true,"preload":true},"code_copy":{"enable":false,"style":"default"},"pjax":{"enable":false},"lazyload":{"enable":true},"version":"3.4.5"};
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
+  </script>
+<meta name="generator" content="Hexo 6.1.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                oops
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                分类
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">分类</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">最近一些面试总结</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/avatar.png">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">Brian</span>
+                        
+                            <span class="author-label">Lv1</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;
+        <span class="pc">2022-04-02 12:39:06</span>
+        <span class="mobile">2022-04-02 12:39</span>
+    </span>
+    
+    
+
+    
+    
+    
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <p>三月下旬，陆陆续续面试了一些公司，发现这些公司技术面的时候所问的问题基本都差不多。为了巩固这方面的知识，同时希望给看到的同学带来一些帮助，做了一下总结，尝试解答或者贴上其他人的回答。</p>
+<h5 id="1、说活对js-x2F-node的事件循环机制"><a href="#1、说活对js-x2F-node的事件循环机制" class="headerlink" title="1、说活对js&#x2F;node的事件循环机制"></a>1、说活对js&#x2F;node的事件循环机制</h5><p>这个问题出现频率还是挺高的，主要考察面试者对js这门语言认识的深度，理解它的执行机制。在github上已经有人回答得很具体了：</p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://github.com/febobo/web-interview/issues/167" >说说对Nodejs中事件循环机制的理解<i class="fas fa-external-link-alt"></i></a></p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://github.com/febobo/web-interview/issues/73" >说说你对事件循环的理解<i class="fas fa-external-link-alt"></i></a></p>
+<h5 id="2、new-具体做了什么，如何实现一个new？"><a href="#2、new-具体做了什么，如何实现一个new？" class="headerlink" title="2、new 具体做了什么，如何实现一个new？"></a>2、new 具体做了什么，如何实现一个new？</h5><p><a class="link"   target="_blank" rel="noopener" href="https://github.com/febobo/web-interview/issues/69" >这是答案<i class="fas fa-external-link-alt"></i></a></p>
+<h5 id="3、说说微前端架构"><a href="#3、说说微前端架构" class="headerlink" title="3、说说微前端架构"></a>3、说说微前端架构</h5><p>微前端其实是借鉴了微服务的概念，微服务大家都知道:后端(根据业务层次)分拆代码并形成独立的库，每个代码库负责自己的业务逻辑，并公开api，独立部署，分由不同团队维护。微前端借鉴了这种做法，把前段项目按照业务分拆成更小的单元，这些单元分由不同人员或团队开发维护，单独部署，其核心思想是远程应用程序和运行时加载。</p>
+<p>参考 <a class="link"   target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/414468874" >深入解析微前端乾坤原理<i class="fas fa-external-link-alt"></i></a></p>
+<h5 id="4、实现一个三栏布局"><a href="#4、实现一个三栏布局" class="headerlink" title="4、实现一个三栏布局"></a>4、实现一个三栏布局</h5><p>三栏布局有很多种方法：利用绝对定位、浮动、bfc，flex、table等都可以实现</p>
+<p>具体可参考 <a class="link"   target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/25070186" >https://zhuanlan.zhihu.com/p/25070186<i class="fas fa-external-link-alt"></i></a></p>
+<h5 id="5、哪些css属性会自动继承，哪些不会？具体讲讲"><a href="#5、哪些css属性会自动继承，哪些不会？具体讲讲" class="headerlink" title="5、哪些css属性会自动继承，哪些不会？具体讲讲"></a>5、哪些css属性会自动继承，哪些不会？具体讲讲</h5><p>字体、文本、可见性属性(opacity visibility)等大多是自动继承属性；盒子模型、背景、定位、生成内容(如content)、轮廓等一般是无继承属性。需要注意：a标签的字体颜色不能被继承，h1-h6的字体大小也不能被继承。</p>
+<h5 id="6、什么是bfc"><a href="#6、什么是bfc" class="headerlink" title="6、什么是bfc"></a>6、什么是bfc</h5><p>bfc即块级格式化上下文，它会形成相对于其容器外一个独立的空间，其内部的子元素不会影响到外部的元素，同时不会和float的元素重叠。bfc可应用于防止margin坍塌、实现多栏布局、清除浮动等场景。触发bfc的条件&#x2F;属性：html、float、值不为visible的overflow、display为inline-block、table、inline-table、table-cell、table-caption、flex、inline-flex、grid、inline-grid.</p>
+
+        </div>
+
+        
+            <div class="post-copyright-info">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li>本文标题：最近一些面试总结</li>
+        <li>本文作者：Brian</li>
+        <li>创建时间：2022-04-02 12:39:06</li>
+        <li>
+            本文链接：https://pointwong.github.io/2022/04/02/一些面试总结/
+        </li>
+        <li>
+            版权声明：本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+
+        
+            <div class="article-nav">
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2022/04/01/%E7%AC%AC%E4%BA%8C%E7%AF%87%E6%96%87%E7%AB%A0/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">第二篇文章</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2020</span>
+              -
+            
+            2022&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">Brian</a>
+        </div>
+        
+            <script async  src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv">
+                        访问人数&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv">
+                        总访问量&nbsp;<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.5</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1%E3%80%81%E8%AF%B4%E6%B4%BB%E5%AF%B9js-x2F-node%E7%9A%84%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF%E6%9C%BA%E5%88%B6"><span class="nav-number">1.</span> <span class="nav-text">1、说活对js&#x2F;node的事件循环机制</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2%E3%80%81new-%E5%85%B7%E4%BD%93%E5%81%9A%E4%BA%86%E4%BB%80%E4%B9%88%EF%BC%8C%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AAnew%EF%BC%9F"><span class="nav-number">2.</span> <span class="nav-text">2、new 具体做了什么，如何实现一个new？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3%E3%80%81%E8%AF%B4%E8%AF%B4%E5%BE%AE%E5%89%8D%E7%AB%AF%E6%9E%B6%E6%9E%84"><span class="nav-number">3.</span> <span class="nav-text">3、说说微前端架构</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4%E3%80%81%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E4%B8%89%E6%A0%8F%E5%B8%83%E5%B1%80"><span class="nav-number">4.</span> <span class="nav-text">4、实现一个三栏布局</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5%E3%80%81%E5%93%AA%E4%BA%9Bcss%E5%B1%9E%E6%80%A7%E4%BC%9A%E8%87%AA%E5%8A%A8%E7%BB%A7%E6%89%BF%EF%BC%8C%E5%93%AA%E4%BA%9B%E4%B8%8D%E4%BC%9A%EF%BC%9F%E5%85%B7%E4%BD%93%E8%AE%B2%E8%AE%B2"><span class="nav-number">5.</span> <span class="nav-text">5、哪些css属性会自动继承，哪些不会？具体讲讲</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#6%E3%80%81%E4%BB%80%E4%B9%88%E6%98%AFbfc"><span class="nav-number">6.</span> <span class="nav-text">6、什么是bfc</span></a></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+    
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+    
+<script src="/js/lazyload.js"></script>
+
+
+
+<div class="post-scripts">
+    
+        
+<script src="/js/left-side-toggle.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+<script src="/js/toc.js"></script>
+
+    
+</div>
+
+
+
+</body>
+</html>
