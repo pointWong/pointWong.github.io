@@ -9,7 +9,7 @@
     
     <title>
         
-            分享一款特别适合切图的截图工具 |
+            css奇技淫巧之currentColor |
         
         oops
     </title>
@@ -165,7 +165,7 @@
     <div class="article-content-container">
 
         <div class="article-title">
-            <span class="title-hover-animation">分享一款特别适合切图的截图工具</span>
+            <span class="title-hover-animation">css奇技淫巧之currentColor</span>
         </div>
 
         
@@ -184,8 +184,8 @@
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fas fa-edit"></i>&nbsp;
-        <span class="pc">2020-12-20 21:02:03</span>
-        <span class="mobile">2020-12-20 21:02</span>
+        <span class="pc">2021-08-05 00:10:16</span>
+        <span class="mobile">2021-08-05 00:10</span>
     </span>
     
         <span class="article-categories article-meta-item">
@@ -193,7 +193,15 @@
             <ul>
                 
                     <li>
-                        <a href="/categories/%E5%B7%A5%E5%85%B7/">工具</a>&nbsp;
+                        <a href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        &gt; <a href="/categories/%E6%8A%80%E6%9C%AF/web%E5%89%8D%E7%AB%AF/">web前端</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        &gt; <a href="/categories/%E6%8A%80%E6%9C%AF/web%E5%89%8D%E7%AB%AF/css/">css</a>&nbsp;
                     </li>
                 
             </ul>
@@ -205,7 +213,7 @@
             <ul>
                 
                     <li>
-                        <a href="/tags/%E6%88%AA%E5%9B%BE%E5%B7%A5%E5%85%B7/">截图工具</a>&nbsp;
+                        <a href="/tags/css/">css</a>&nbsp;
                     </li>
                 
             </ul>
@@ -224,11 +232,11 @@
         
 
         <div class="article-content markdown-body">
-            <p>推荐一款特别适合前端切图的截图工具。它的主要功能是截图、贴图和取色，由国人开发，完全免费，无广告，体积小却功能逆天，个人觉得是目前用过的最好用的截图工具。</p>
-<p>下载地址：</p>
-<p><a class="link"   target="_blank" rel="noopener" href="https://www.snipaste.com/" >https://www.snipaste.com/<i class="fas fa-external-link-alt"></i></a></p>
-<p>或者</p>
-<p>链接：<a class="link"   target="_blank" rel="noopener" href="https://pan.baidu.com/s/1klNDMibTT4rsKJ2ceu_coQ" >https://pan.baidu.com/s/1klNDMibTT4rsKJ2ceu_coQ<i class="fas fa-external-link-alt"></i></a><br>提取码：pyvz</p>
+            <h5 id="currentColor"><a href="#currentColor" class="headerlink" title="currentColor"></a>currentColor</h5><p>相信不少前端同学没听过这个，也许会疑惑，css里面有这东西？哈哈，有的，它用来表示当前文字的颜色，不管当前文字的颜色是直接设置还是继承的。下面代码说明：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">.box&#123;</span><br><span class="line">	color:yellow;</span><br><span class="line">	background:currentColor; //这里currentColor就是yellow</span><br><span class="line">&#125;</span><br><span class="line">//同样的</span><br><span class="line">.box&#123;</span><br><span class="line">	color:yellow;</span><br><span class="line">	.inner-box&#123;</span><br><span class="line">		background:currentColor;//文字颜色继承而来，所以这里的currentColor也是yellow</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>还有，border和box-shadow的默认值都是currentColor，也就是说，这两个属性不设置颜色值时默认采用currentColor,比如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.box&#123;</span><br><span class="line">	color:yellow;</span><br><span class="line">	border:1px solid;//等同于  border:1px solid yellow;</span><br><span class="line">	box-shadow:0 0 0;//等同于 box-shadow:0 0 0 yellow;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
         </div>
 
@@ -236,11 +244,11 @@
             <div class="post-copyright-info">
                 <div class="article-copyright-info-container">
     <ul>
-        <li>本文标题：分享一款特别适合切图的截图工具</li>
+        <li>本文标题：css奇技淫巧之currentColor</li>
         <li>本文作者：Brian</li>
-        <li>创建时间：2020-12-20 21:02:03</li>
+        <li>创建时间：2021-08-05 00:10:16</li>
         <li>
-            本文链接：https://pointwong.github.io/2020/12/20/分享一款特别适合切图的截图工具/
+            本文链接：https://pointwong.github.io/2021/08/05/css奇技淫巧之currentColor/
         </li>
         <li>
             版权声明：本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -255,7 +263,7 @@
             <ul class="post-tags-box">
                 
                     <li class="tag-item">
-                        <a href="/tags/%E6%88%AA%E5%9B%BE%E5%B7%A5%E5%85%B7/">#截图工具</a>&nbsp;
+                        <a href="/tags/css/">#css</a>&nbsp;
                     </li>
                 
             </ul>
@@ -267,13 +275,13 @@
                     <div class="article-prev">
                         <a class="prev"
                            rel="prev"
-                           href="/2021/08/05/css%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7%E4%B9%8BcurrentColor/"
+                           href="/2022/04/01/%E7%A5%9E%E4%B9%8B%E5%8E%8B%E8%BF%AB/"
                         >
                             <span class="left arrow-icon flex-center">
                               <i class="fas fa-chevron-left"></i>
                             </span>
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">css奇技淫巧之currentColor</span>
+                                <span class="post-nav-title-item">神之压迫</span>
                                 <span class="post-nav-item">上一篇</span>
                             </span>
                         </a>
@@ -283,10 +291,10 @@
                     <div class="article-next">
                         <a class="next"
                            rel="next"
-                           href="/2020/04/04/electron%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%85%A5%E9%97%A8/"
+                           href="/2020/12/20/%E5%88%86%E4%BA%AB%E4%B8%80%E6%AC%BE%E7%89%B9%E5%88%AB%E9%80%82%E5%90%88%E5%88%87%E5%9B%BE%E7%9A%84%E6%88%AA%E5%9B%BE%E5%B7%A5%E5%85%B7/"
                         >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">electron从入门到入门</span>
+                                <span class="post-nav-title-item">分享一款特别适合切图的截图工具</span>
                                 <span class="post-nav-item">下一篇</span>
                             </span>
                             <span class="right arrow-icon flex-center">
@@ -411,7 +419,7 @@
         <aside class="page-aside">
             <div class="post-toc-wrap">
     <div class="post-toc">
-        
+        <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#currentColor"><span class="nav-number">1.</span> <span class="nav-text">currentColor</span></a></li></ol>
     </div>
 </div>
         </aside>
