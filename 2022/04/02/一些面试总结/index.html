@@ -177,7 +177,7 @@
                     <div class="author">
                         <span class="name">Brian</span>
                         
-                            <span class="author-label">Lv1</span>
+                            <span class="author-label">Lv2</span>
                         
                     </div>
                     <div class="meta-info">
@@ -330,6 +330,9 @@
 <p>分割模块，每个模块拥有独立的state、getters、mutantions、actions</p>
 <p>除此之外，vuex还提供了mapState,mapGetters.mapMutation,mapActions等函数，使得开发者在vm中更加方便地处理store.</p>
 <p>vuex和vue实例绑定是借助mixin，在初始化阶段之前把store注册到vue组件实例，并注册引用$store。借助vue的data实现state的响应，借助computed实现getters的实时监听。</p>
+<p>vuex按需加载，有时候我们进入首页，并不需要所有的vuex里面维护的状态，只需要加载首页用到的状态即可，这个时候就可以利用vuex提供的registerModule来按需异步加载不同的vuex模块。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">if(isNeedVuexModule)&#123;</span><br><span class="line">	import(&#x27;./store/modules/&#x27;+moduleName).then(res=&gt;&#123;</span><br><span class="line">		this.$store.registerModule(moduleName,res.default)</span><br><span class="line">	&#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h5 id="13、路由-x2F-按钮权限控制是怎么做的"><a href="#13、路由-x2F-按钮权限控制是怎么做的" class="headerlink" title="13、路由&#x2F;按钮权限控制是怎么做的"></a>13、路由&#x2F;按钮权限控制是怎么做的</h5><p>参考 <a class="link"   target="_blank" rel="noopener" href="https://juejin.cn/post/6844903933429678094" >https://juejin.cn/post/6844903933429678094<i class="fas fa-external-link-alt"></i></a></p>
 <h5 id="14、vue中是如何监听数组的改变的"><a href="#14、vue中是如何监听数组的改变的" class="headerlink" title="14、vue中是如何监听数组的改变的"></a>14、vue中是如何监听数组的改变的</h5><p>vue2在原因层面不支持用Object.defineProperty监听不存在的数组元素，并且通过一些能造成数组改变的方法也不能被监听到。vue2中重写了push，pop，shift，unshift，aplice.sort,reverse这七个数组方法，数组在执行这几个方法是手动触发响应页面的效果。至于为什么不去监听数组中已存在元素的变化，可参考：<a class="link"   target="_blank" rel="noopener" href="https://github.com/vuejs/vue/issues/8562" >https://github.com/vuejs/vue/issues/8562<i class="fas fa-external-link-alt"></i></a></p>
 <h5 id="15、谈谈vue-extend的作用"><a href="#15、谈谈vue-extend的作用" class="headerlink" title="15、谈谈vue.extend的作用"></a>15、谈谈vue.extend的作用</h5><p>Vue提供的一个构造器，用于创建一个子类，参数是一个包含组件选型的对象，</p>
@@ -456,10 +459,10 @@
                     <div class="article-next">
                         <a class="next"
                            rel="next"
-                           href="/2021/08/05/css%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7%E4%B9%8BcurrentColor/"
+                           href="/2021/12/05/css%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7%E4%B9%8Ball/"
                         >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">css奇技淫巧之currentColor</span>
+                                <span class="post-nav-title-item">css奇技淫巧之all</span>
                                 <span class="post-nav-item">下一篇</span>
                             </span>
                             <span class="right arrow-icon flex-center">
