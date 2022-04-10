@@ -236,7 +236,17 @@
         
 
         <div class="article-content markdown-body">
-            
+            <p>es5中没有类的概念，他的继承是基于原型的，每个函数都有一个prototype属性，指向函数的原型对象。每一个对象有关联一个原型对象，用__proto__属性可以访问到这个原型对象。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">function Person(name,gender)&#123;</span><br><span class="line">    this.name =name</span><br><span class="line">    this.gender = gender</span><br><span class="line">&#125;</span><br><span class="line">const Brian = new Person(&#x27;Brian&#x27;,&#x27;male&#x27;)</span><br><span class="line">Person.prototype.getName = function()&#123;</span><br><span class="line">    return this.name</span><br><span class="line">&#125;</span><br><span class="line">Person.prototype.country = &quot;cn&quot;</span><br><span class="line">console.log(Brian.__proto__==Person.prototype) //true</span><br><span class="line">console.log(Brian.getName()) //Brian</span><br><span class="line">console.log(Brian.country) // cn</span><br></pre></td></tr></table></figure>
+<p>从上面的例子中可以看出，实例的__proto__和 构造函数的prototype属性指向的是同一个对象，也就是原型，实例会继承原型上的属性和方法，country和getName就是继承自原型。</p>
+<p>构造函数、原型和实例之间的关系就是：每个函数都有一个原型对象(prototype)，原型对象都包含这一个指向构造函数的指针(constructor),而实例都包含一个指向原型对象的内部指针(proto)。假如我们让原型对象等于另一个类型的实例，这时的原型对象将包含一个指向另一个原型的指针，同样另一个原型中也包含着一个指向另一个构造函数的指针。如果另一个原型又是另一个类型的实例，这样上面描述的关系仍会成立，这样层层递进，构成了实例与原型的链条，就是原型链。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">function Cat()&#123;&#125;</span><br><span class="line">Cat.prototype.constructor == Cat //true</span><br></pre></td></tr></table></figure>
+<p>原型中包含一个指向构造函数的指针，也就是说构造函数的原型的构造函数指向其自身，因此，可以把原型看成构造函数的一个特殊实例，其他实例”共享”这个特殊实例的属性和方法。看下面代码</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">function Animal()&#123;&#125;</span><br><span class="line">let cat = new Animal() //普通实例</span><br><span class="line">Animal.prototype.name = &#x27;cat&#x27; //把原型看成Animal的一个特殊实例</span><br><span class="line">Animal.prototype.getName = function()&#123;</span><br><span class="line">    return this.name</span><br><span class="line">&#125;</span><br><span class="line">console.log(cat.name) //cat</span><br><span class="line">console.log(cat.getName()) //cat</span><br></pre></td></tr></table></figure>
+
+<p>可以看到，就算name和getName是在实例化得到cat后定义的，cat依旧可以访问到他们的，这也说明，实例“共享”原型的属性和方法。</p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://www.jianshu.com/p/08c07a953fa0" >参考:https://www.jianshu.com/p/08c07a953fa0<i class="fas fa-external-link-alt"></i></a></p>
+
         </div>
 
         
