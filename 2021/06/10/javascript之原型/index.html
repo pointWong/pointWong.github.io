@@ -177,7 +177,7 @@
                     <div class="author">
                         <span class="name">Brian</span>
                         
-                            <span class="author-label">Lv2</span>
+                            <span class="author-label">Lv3</span>
                         
                     </div>
                     <div class="meta-info">
@@ -245,6 +245,12 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">function Animal()&#123;&#125;</span><br><span class="line">let cat = new Animal() //普通实例</span><br><span class="line">Animal.prototype.name = &#x27;cat&#x27; //把原型看成Animal的一个特殊实例</span><br><span class="line">Animal.prototype.getName = function()&#123;</span><br><span class="line">    return this.name</span><br><span class="line">&#125;</span><br><span class="line">console.log(cat.name) //cat</span><br><span class="line">console.log(cat.getName()) //cat</span><br></pre></td></tr></table></figure>
 
 <p>可以看到，就算name和getName是在实例化得到cat后定义的，cat依旧可以访问到他们的，这也说明，实例“共享”原型的属性和方法。</p>
+<p>在js中，一切皆对象，由Function创建的是函数对象(包括Function本身)，由Object创建的是普通对象。既然都是对象，除了普通对象外，函数对象也会有一个指向其构造函数原型对象的指针，也就是所有函数的__proto__属性都指向Function.prototype,而Function.prototype是个普通对象，所以Function.prototype.__proto__指向Object.prototype,所有对象都有一个指针指向原型对象，但是由于Object.prototype已经到了最顶端，所以Object.prototype.<strong>proto</strong> 指向null。</p>
+<p>会发现，除Object本身外，其他内置函数的原型都是由Object创建，这其中除了Function.prototype是函数对象外，其余的都是普通对象。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Object.prototype instanceof Object //false</span><br><span class="line">typeof Object.prototype == &#x27;object&#x27; // true</span><br><span class="line">typeof Function.prototype == &#x27;function&#x27; // true</span><br><span class="line">typeof Array.prototype == &#x27;object&#x27; //true</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>为什么Object.prototype.constructor是Object，说明Object.prototype是由Object创建的，但是，为什么Object.prototype instanceof Object 的结果却是false呢？原因是instanceof是通过查找原型链判断，由于Object.prototype已经到达最顶端，它的__proto__属性指向null。<br>然后会有一些有趣的现象</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Function.constructor == Function // true</span><br><span class="line">Function.__proto__ == Function.prototype //true</span><br><span class="line">Object instanceof Object // true </span><br><span class="line">Function instanceof Function //true</span><br><span class="line">Function instanceof Object //true</span><br><span class="line">Object instanceof Function //true</span><br></pre></td></tr></table></figure>
+<p>可以看出Function和Object，我中有你，你中有我，却最终又指向一个null。这是js这门语言的奇妙之处。</p>
 <p><a class="link"   target="_blank" rel="noopener" href="https://www.jianshu.com/p/08c07a953fa0" >参考:https://www.jianshu.com/p/08c07a953fa0<i class="fas fa-external-link-alt"></i></a></p>
 
         </div>
