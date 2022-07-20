@@ -283,7 +283,7 @@
 <p>返回一个promise，只要有一个promise的状态改为fulfiled或rejected，则立即触发其自身的fulfied或者rejected。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Promise.resolve(value)</span><br></pre></td></tr></table></figure>
 
-<p>返回一个状态有给定value决定的promise对象。</p>
+<p>返回一个状态为成功的promise对象。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Promise.reject(error)</span><br></pre></td></tr></table></figure>
 
 <p>返回一个状态为失败的promise对象。</p>
@@ -355,7 +355,7 @@
 <li>-使用webp格式的图片</li>
 </ul>
 <p>10、代码按需加载</p>
-<p>11、减少页面重排重回</p>
+<p>11、减少页面重排重绘</p>
 <ul>
 <li>-修改样式时不直接写样式，而是通过替换class来改变样式</li>
 <li>-先将dom元素脱离文档流，修改完之后再带回文档</li>
@@ -366,7 +366,7 @@
 <p>由于大部分设备刷新频率为60次&#x2F;秒，每一帧的平均时间大概为16毫秒，js实现动画最好的情况就是在帧的开头开始执行，requestAnimationFrame正好可以满足这点</p>
 <p>14、使用webworker线程处理耗时操作</p>
 <p><strong>说说微前端架构</strong></p>
-<p>微前端其实是借鉴了微服务的概念，微服务大家都知道:后端(根据业务层次)分拆代码并形成独立的库，每个代码库负责自己的业务逻辑，并公开api，独立部署，分由不同团队维护。微前端借鉴了这种做法，把前段项目按照业务分拆成更小的单元，这些单元分由不同人员或团队开发维护，单独部署，其核心思想是远程应用程序和运行时加载。</p>
+<p>微前端其实是借鉴了微服务的概念，微服务大家都知道:后端(根据业务层次)分拆代码并形成独立的库，每个代码库负责自己的业务逻辑，并公开api，独立部署，分由不同团队维护。微前端借鉴了这种做法，把前端项目按照业务分拆成更小的单元，这些单元分由不同人员或团队开发维护，单独部署，其核心思想是远程应用程序和运行时加载。</p>
 <p>参考 <a class="link"   target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/414468874" >深入解析微前端乾坤原理<i class="fas fa-external-link-alt"></i></a></p>
 <h3 id="打包-x2F-构建工具"><a href="#打包-x2F-构建工具" class="headerlink" title="打包&#x2F;构建工具"></a>打包&#x2F;构建工具</h3><p><strong>关于webpack，如何编写一个loader和plugin</strong></p>
 <p>1、关于loader</p>
@@ -396,7 +396,7 @@
 <p>常见的http状态码：</p>
 <ul>
 <li>1表示消息 100临时相应，需要客户端继续发送请求 101 服务器根据客户端请求切换协议 主要用于websoket或http2升级</li>
-<li>2表示成功 200表示成功 201表示创建了新的资源 202 表示服务器已经接受了请求 单位处理 204服务器成功处理但不返回任何内容 206 表示处理了部分请求</li>
+<li>2表示成功 200表示成功 201表示创建了新的资源 202 表示服务器已经接受了请求 但未处理 204服务器成功处理但不返回任何内容 206 表示处理了部分请求</li>
 <li>表示重定向 301&#x2F;308永久重定向 302&#x2F;307临时 304表示使用缓存</li>
 <li>4表示请求错误 400错误语法 401未授权 403服务器拒绝 404未找到 407需要代理 408超时</li>
 <li>5表示服务器错误 500服务器内部错误 502网关错误 504网关超时 505 http版本的问题</li>
