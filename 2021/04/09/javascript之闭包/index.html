@@ -92,6 +92,14 @@
                             </a>
                         </li>
                     
+                        <li class="menu-item">
+                            <a class=""
+                               target="_blank" rel="noopener" href="https://benbb.cc"
+                            >
+                                BENBB
+                            </a>
+                        </li>
+                    
                     
                         <li class="menu-item search search-popup-trigger">
                             <i class="fas fa-search"></i>
@@ -131,6 +139,11 @@
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/tags">标签</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       target="_blank" rel="noopener" href="https://benbb.cc">BENBB</a>
                 </li>
             
         </ul>
@@ -222,7 +235,7 @@
 <li>参数和变量不会被垃圾回收机制回收</li>
 </ul>
 <p>闭包一般用来设计私有的方法和变量</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">function aaa() &#123;  	</span><br><span class="line">    var a = 1;  		</span><br><span class="line">    return function()&#123;		</span><br><span class="line">        alert(a++)	</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br><span class="line">var fun = aaa();</span><br><span class="line">fun();// 1 执行后 a++，，然后a还在</span><br><span class="line">fun();// 2   </span><br><span class="line">fun = null;//a被回收！！</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">function aaa() &#123;  	</span><br><span class="line">    var a = 1;  		</span><br><span class="line">    return function()&#123;		</span><br><span class="line">        alert(a++)	</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br><span class="line">var fun = aaa();</span><br><span class="line">fun();// 1 执行后 a++，，然后a会驻留在内存中</span><br><span class="line">fun();// 2   </span><br><span class="line">fun = null;//a被回收！！</span><br></pre></td></tr></table></figure>
 <p>闭包的好处是，使得一个变量长期驻留在内存，避免全局变量的污染。但是，正是由于常驻内存，会增大内存使用量，处理不当就会造成内存泄漏。</p>
 <p>看下面这段代码</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">function add () &#123;  </span><br><span class="line">    var test = 0;  </span><br><span class="line">    return function () &#123;    </span><br><span class="line">        test++;    </span><br><span class="line">        return test;  </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">var test = add();</span><br><span class="line">console.log(test()); // 1</span><br><span class="line">console.log(test()); // 2</span><br><span class="line">console.log(test()); // 3</span><br><span class="line">console.log(test()); // 4</span><br><span class="line">console.log(test()); // 5</span><br><span class="line"></span><br></pre></td></tr></table></figure>
@@ -315,7 +328,7 @@
               <span>2020</span>
               -
             
-            2022&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">Brian</a>
+            2023&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">Brian</a>
         </div>
         
             <script async  src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
